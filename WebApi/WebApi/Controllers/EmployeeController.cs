@@ -15,24 +15,24 @@ namespace WebApi.Controllers
     public class EmployeeController : ApiController
     {
         private DBModel db = new DBModel();
-        
+
         // GET: api/Employee
         public IQueryable<newTblEmployee> GetnewTblEmployees()
         {
             return db.newTblEmployees;
         }
 
-        ////GET: api/Employee/5
-        //[ResponseType(typeof(newTblEmployee))]
-        //public IHttpActionResult GetnewTblEmployee(int id)
-        //{
-        //    newTblEmployee newTblEmployee = db.newTblEmployees.Find(id);
-        //    if (newTblEmployee == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return Ok(newTblEmployee);
-        //}
+        //GET: api/Employee/5
+        [ResponseType(typeof(newTblEmployee))]
+        public IHttpActionResult GetnewTblEmployee(int id)
+        {
+            newTblEmployee newTblEmployee = db.newTblEmployees.Find(id);
+            if (newTblEmployee == null)
+            {
+                return NotFound();
+            }
+            return Ok(newTblEmployee);
+        }
 
         // PUT: api/Employee/5
         [ResponseType(typeof(void))]
@@ -77,10 +77,8 @@ namespace WebApi.Controllers
             //{
             //    return BadRequest(ModelState);
             //}
-
             db.newTblEmployees.Add(newTblEmployee);
             db.SaveChanges();
-
             return CreatedAtRoute("DefaultApi", new { id = newTblEmployee.EmployeeID }, newTblEmployee);
         }
 

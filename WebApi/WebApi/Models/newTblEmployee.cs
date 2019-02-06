@@ -17,8 +17,8 @@ namespace WebApi.Models
         public int EmployeeID { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
+        public Nullable<System.DateTime> DateOfBirth { get; set; }
         public string City { get; set; }
-        public DateTime DateOfBirth { get; set; }
         public string EmployeeCode { get; set; }
         public string Mobile { get; set; }
         public string Position { get; set; }

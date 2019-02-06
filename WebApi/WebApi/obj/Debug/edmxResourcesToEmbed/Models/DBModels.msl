@@ -4,11 +4,11 @@
     <EntitySetMapping Name="newTblEmployees">
       <EntityTypeMapping TypeName="EmployeeDBModel.newTblEmployee">
         <MappingFragment StoreEntitySet="newTblEmployee">
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
           <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Gender" ColumnName="Gender" />
           <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
           <ScalarProperty Name="EmployeeCode" ColumnName="EmployeeCode" />
           <ScalarProperty Name="Mobile" ColumnName="Mobile" />
           <ScalarProperty Name="Position" ColumnName="Position" />
